@@ -5,14 +5,14 @@
   <title>Quarterly Earnings Report</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- RevealJS Core -->
+  <!-- Reveal.js core -->
   <link rel="stylesheet" href="dist/reveal.css">
   <link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
-  <!-- Code syntax highlighting -->
+  <!-- Code highlighting -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-  <!-- Math (KaTeX) -->
+  <!-- Math support -->
   <link rel="stylesheet" href="plugin/math/math.css">
 </head>
 
@@ -20,18 +20,18 @@
   <div class="reveal">
     <div class="slides">
 
-      <!-- SLIDE 1 — MUST HAVE EMAIL (plain HTML) -->
+      <!-- FIRST SLIDE — PLAIN HTML, HARD CODED EMAIL -->
       <section>
         <h1>Quarterly Earnings Report</h1>
         <h3>Financial Institution</h3>
-        <p><strong>Email:</strong> 23f2003561@ds.study.iitm.ac.in</p>
+        <p><strong>Email: 23f2003561@ds.study.iitm.ac.in</strong></p>
 
         <aside class="notes">
-          This is the opening slide. Introduce yourself and the purpose of the quarterly report.
+          This is the opening slide. Introduce yourself.
         </aside>
       </section>
 
-      <!-- SLIDE 2 — MARKDOWN SLIDE -->
+      <!-- MARKDOWN SLIDE -->
       <section data-markdown>
         <textarea data-template>
 ## Revenue Overview (Markdown Slide)
@@ -42,7 +42,7 @@
         </textarea>
       </section>
 
-      <!-- SLIDE 3 — FRAGMENTS -->
+      <!-- FRAGMENTS -->
       <section>
         <h2>Key Highlights</h2>
         <p class="fragment">Net profit increased by 18%</p>
@@ -50,11 +50,11 @@
         <p class="fragment">Digital transactions up 22%</p>
 
         <aside class="notes">
-          Talk through each metric as it appears. Pause between fragments.
+          Talk through each metric as it appears.
         </aside>
       </section>
 
-      <!-- SLIDE 4 — CODE HIGHLIGHTING -->
+      <!-- CODE HIGHLIGHTING -->
       <section>
         <h2>Sample Data Processing Code</h2>
 
@@ -67,46 +67,33 @@ print(df.head())
         </code></pre>
 
         <aside class="notes">
-          Explain how internal analytics teams process earnings data.
+          Explain backend computation.
         </aside>
       </section>
 
-      <!-- SLIDE 5 — MATH EQUATIONS -->
+      <!-- MATH EQUATIONS -->
       <section>
         <h2>Financial Formula</h2>
 
         <p>Return on Investment (ROI):</p>
 
         <p>
-          \\[
-            ROI = \frac{\text{Net Profit}}{\text{Cost of Investment}} \times 100
-          \\]
+        \[
+          ROI = \frac{\text{Net Profit}}{\text{Cost of Investment}} \times 100
+        \]
         </p>
 
         <aside class="notes">
-          Walk through the ROI formula and interpret results.
+          Define ROI and interpret results.
         </aside>
       </section>
 
     </div>
   </div>
 
-  <!-- RevealJS -->
+  <!-- JAVASCRIPT -->
   <script src="dist/reveal.js"></script>
 
   <!-- Plugins -->
   <script src="plugin/markdown/markdown.js"></script>
-  <script src="plugin/highlight/highlight.js"></script>
-  <script src="plugin/notes/notes.js"></script>
-  <script src="plugin/math/math.js"></script>
-
-  <!-- Initialize RevealJS -->
-  <script>
-    Reveal.initialize({
-      hash: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
-    });
-  </script>
-
-</body>
-</html>
+  <script src="plugin/highlight/
