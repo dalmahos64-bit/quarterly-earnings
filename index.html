@@ -3,91 +3,110 @@
 <head>
   <meta charset="utf-8">
   <title>Quarterly Earnings Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Reveal.js core CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css">
+  <!-- RevealJS Core -->
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
-  <!-- Highlight.js for code syntax highlighting -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-  <!-- KaTeX for math formulas -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <!-- Math (KaTeX) -->
+  <link rel="stylesheet" href="plugin/math/math.css">
 </head>
+
 <body>
   <div class="reveal">
     <div class="slides">
 
-      <!-- Slide 1: Title with email -->
+      <!-- SLIDE 1 — MUST HAVE EMAIL (plain HTML) -->
       <section>
         <h1>Quarterly Earnings Report</h1>
-        <p>Presented by 23f2003561@ds.study.iitm.ac.in</p>
+        <h3>Financial Institution</h3>
+        <p><strong>Email:</strong> 23f2003561@ds.study.iitm.ac.in</p>
+
+        <aside class="notes">
+          This is the opening slide. Introduce yourself and the purpose of the quarterly report.
+        </aside>
       </section>
 
-      <!-- Slide 2: Markdown slide -->
+      <!-- SLIDE 2 — MARKDOWN SLIDE -->
       <section data-markdown>
         <textarea data-template>
-## Financial Overview
+## Revenue Overview (Markdown Slide)
 
-- Revenue: $12M
-- Expenses: $8M
-- Net Profit: $4M
+- Total Revenue ↑ 12%
+- Customer Growth ↑ 8%
+- Market Share ↑ 3%
         </textarea>
       </section>
 
-      <!-- Slide 3: Fragments for animated points -->
+      <!-- SLIDE 3 — FRAGMENTS -->
       <section>
         <h2>Key Highlights</h2>
-        <ul>
-          <li class="fragment">Increased customer acquisition by 15%</li>
-          <li class="fragment">Reduced operational costs by 10%</li>
-          <li class="fragment">Profit margin improved to 33%</li>
-        </ul>
+        <p class="fragment">Net profit increased by 18%</p>
+        <p class="fragment">Operating expenses reduced by 5%</p>
+        <p class="fragment">Digital transactions up 22%</p>
+
+        <aside class="notes">
+          Talk through each metric as it appears. Pause between fragments.
+        </aside>
       </section>
 
-      <!-- Slide 4: Code example -->
+      <!-- SLIDE 4 — CODE HIGHLIGHTING -->
       <section>
+        <h2>Sample Data Processing Code</h2>
+
         <pre><code class="language-python">
-# Calculate profit margin
-revenue = 12_000_000
-expenses = 8_000_000
-profit_margin = (revenue - expenses) / revenue
-print(profit_margin)
+import pandas as pd
+
+df = pd.read_csv("earnings.csv")
+df["profit_margin"] = df["net_income"] / df["revenue"]
+print(df.head())
         </code></pre>
+
+        <aside class="notes">
+          Explain how internal analytics teams process earnings data.
+        </aside>
       </section>
 
-      <!-- Slide 5: Math formula -->
+      <!-- SLIDE 5 — MATH EQUATIONS -->
       <section>
         <h2>Financial Formula</h2>
-        <p>\( \text{Profit Margin} = \frac{\text{Revenue} - \text{Expenses}}{\text{Revenue}} \times 100 \% \)</p>
-      </section>
 
-      <!-- Slide 6: Speaker notes -->
-      <section data-note="Emphasize revenue growth and operational efficiency.">
-        <h2>Discussion Points</h2>
-        <ul>
-          <li>Revenue trends</li>
-          <li>Cost optimization</li>
-          <li>Future projections</li>
-        </ul>
+        <p>Return on Investment (ROI):</p>
+
+        <p>
+          \\[
+            ROI = \frac{\text{Net Profit}}{\text{Cost of Investment}} \times 100
+          \\]
+        </p>
+
+        <aside class="notes">
+          Walk through the ROI formula and interpret results.
+        </aside>
       </section>
 
     </div>
   </div>
 
-  <!-- Reveal.js core JS -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+  <!-- RevealJS -->
+  <script src="dist/reveal.js"></script>
 
   <!-- Plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/math/math.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/math/math.js"></script>
 
+  <!-- Initialize RevealJS -->
   <script>
     Reveal.initialize({
       hash: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
     });
   </script>
+
 </body>
 </html>
