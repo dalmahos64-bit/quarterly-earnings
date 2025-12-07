@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quarterly Earnings Report</title>
+
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css">
+
+  <!-- Highlight.js for code syntax highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
+
+  <!-- KaTeX for math formulas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title with email -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <p>Presented by 23f2003561@ds.study.iitm.ac.in</p>
+      </section>
+
+      <!-- Slide 2: Markdown slide -->
+      <section data-markdown>
+        <textarea data-template>
+## Financial Overview
+
+- Revenue: $12M
+- Expenses: $8M
+- Net Profit: $4M
+        </textarea>
+      </section>
+
+      <!-- Slide 3: Fragments for animated points -->
+      <section>
+        <h2>Key Highlights</h2>
+        <ul>
+          <li class="fragment">Increased customer acquisition by 15%</li>
+          <li class="fragment">Reduced operational costs by 10%</li>
+          <li class="fragment">Profit margin improved to 33%</li>
+        </ul>
+      </section>
+
+      <!-- Slide 4: Code example -->
+      <section>
+        <pre><code class="language-python">
+# Calculate profit margin
+revenue = 12_000_000
+expenses = 8_000_000
+profit_margin = (revenue - expenses) / revenue
+print(profit_margin)
+        </code></pre>
+      </section>
+
+      <!-- Slide 5: Math formula -->
+      <section>
+        <h2>Financial Formula</h2>
+        <p>\( \text{Profit Margin} = \frac{\text{Revenue} - \text{Expenses}}{\text{Revenue}} \times 100 \% \)</p>
+      </section>
+
+      <!-- Slide 6: Speaker notes -->
+      <section data-note="Emphasize revenue growth and operational efficiency.">
+        <h2>Discussion Points</h2>
+        <ul>
+          <li>Revenue trends</li>
+          <li>Cost optimization</li>
+          <li>Future projections</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js core JS -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/math/math.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+    });
+  </script>
+</body>
+</html>
